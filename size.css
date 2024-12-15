@@ -1,0 +1,315 @@
+body {
+  /* background-color: black; */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  /* height: 100vh; */
+  overflow: hidden; /* Prevents body scroll */
+  height: 100%;
+  color: white;
+}
+#textBox {
+  border: 0px;
+  width: 50%;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding: 4px;
+}
+#root {
+  width: 100vw;
+
+  height: 100vh;
+}
+.root{
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+#progress {
+  position: absolute;
+  top: calc(100vh - 250px);
+  width: 80%;
+  background-color: black;
+  color: white;
+  visibility: hidden;
+  text-align: center;
+}
+
+#companyErrorMsg {
+  position: absolute;
+  top: calc(100vh - 150px);
+  width: 80%;
+  background-color: black;
+  color: white;
+  visibility: hidden;
+  text-align: center;
+}
+
+.swal2-popup {
+  font-size: 20px;
+  padding: 0px;
+  margin: 0px;
+  padding: 0px;
+  width: 35em !important;
+}
+.swal2-container .swal2-html-container {
+  text-align: left;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+.toolbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.errorMsgShow {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+#textBox {
+  width: 80%;
+}
+
+/* increase of decrease the height and widht of buttons here  */
+button {
+  padding: 5px;
+  background: transparent;
+  border: none;
+  cursor: default;
+  color: white;
+
+  height: 40px;
+}
+#connect {
+  cursor: pointer;
+}
+
+/* increase of decrease fontsie here  */
+button .material-icons {
+  color: white;
+  font-size: 24px;
+}
+
+.navbar-logo {
+  display: flex;
+  height: fit-content;
+  position: relative;
+  margin: 14px;
+  justify-content: end;
+}
+
+
+
+
+
+.chat-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+/* .chatbot .chat-balloon {
+  color: #6699ff;
+  border: 1px solid white;
+  background-color: black;
+} */
+
+.user .chat-balloon {
+  color: white;
+  border: 1px solid #f3f3f3;
+  background-color: rgb(233, 201, 143);
+  margin-left: auto;
+}
+
+.chat-balloon {
+  font-size: 14px;
+  max-width: 60%;
+  padding: 6px 10px;
+  border-radius: 10px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+.chat-balloon a {
+  text-decoration: none;
+}
+
+#input-container {
+  display: flex;
+  padding: 10px;
+  background-color: black;
+  border-top: 1px solid black;
+}
+
+#input-container textarea {
+  flex: 1;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  height: 36px;
+}
+
+#input-container button {
+  padding: 5px 10px;
+  height: 36px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn {
+  display: flex;
+  gap: 8px;
+  padding-top: 10px;
+  flex-wrap: wrap;
+}
+.chat-button {
+  width: 140px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #3f3f3f;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+  /* Ensure the tooltip is relative to the button */
+}
+
+.chat-button:hover {
+  background-color: #ddd;
+}
+
+.chat-button:hover {
+  background-color: #e3e1e1;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chat-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.videoContainer {
+  border: 1px solid;
+  max-width: 60%;
+  width: min-content;
+  padding: 12px 15px;
+  word-wrap: break-word;
+  border-radius: 10px;
+  line-height: 1.5;
+  overflow: hidden;
+}
+.videoContainer iframe {
+  width: 350px;
+  height: 200px;
+  border: none;
+}
+.videoContainer span {
+  color: #6699ff;
+}
+video{
+  object-fit: cover;
+}
+.imageContainer {
+  border: 1px solid;
+  max-width: 60%;
+
+  padding: 6px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.buttonContainer {
+  border-radius: 10px;
+  border: 1px solid;
+  max-width: 60%;
+  padding: 12px 15px;
+}
+.buttonContainer span {
+  color: #6699ff;
+}
+
+
+@keyframes bump {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.bump {
+  animation: bump 0.4s ease-in-out;
+  animation-iteration-count: 2; /* Only bump 3 times */
+}
+
+/* Highlight button when clicked */
+.clicked {
+  background-color: #e0e0e0; /* Example click feedback color */
+  transition: background-color 0.3s ease;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.pulse {
+  animation: pulse 0.4s ease;
+}
+
+
+.day-mode {
+  background-color: white;
+}
+
+.day-mode .chat-balloon.user {
+  border: 1px solid white;
+  background-color: rgb(236, 196, 122);
+  color: white;
+}
+
+.day-mode .chat-balloon.chatbot {
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
+
+/* Night Mode */
+.night-mode {
+  background-color: black;
+}
+
+.night-mode .chat-balloon.user {
+  border: 1px solid white;
+  background-color: rgb(236, 196, 122);
+  color: white;
+}
+
+.night-mode .chat-balloon.chatbot {
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+}

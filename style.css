@@ -1,0 +1,451 @@
+/* Floating Digital Human */
+
+/* .myvideoDiv{
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    width: 300px;
+    height: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+  } */
+
+/* #myvideo{
+    width:100%; 
+    height:100%;
+  }
+ */
+
+#root {
+  display: flex;
+  align-items: center;
+}
+
+/* Full Screen Digital Human */
+@media (max-width: 480px) {
+  .company-logo {
+    height: 45px !important;
+  }
+
+  /* .home.small {
+    width: 50vw !important;
+    height: 30vh !important;
+    overflow: hidden;
+  }
+  .buttonOption img{
+   height: 20vh;
+   } */
+}
+
+@media (min-width: 769px) {
+  .home {
+    position: fixed;
+    bottom: 19px;
+    right: 20px;
+    width: 400px;
+    height: 600px;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .home.large {
+    width: 350px;
+    height: 550px;
+    background-color: black;
+
+  }
+
+  header {
+    background-color: rgb(224, 17, 17);
+    display: block;
+    position: absolute;
+    width: 100vw;
+    /* width: 100%; */
+    padding: 10px;
+  }
+
+  header h1 {
+    margin: auto;
+  }
+
+  #main-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    /* width: 60%; */
+    height: 90vh;
+    justify-content: center;
+    left: 0px;
+    right: 0px;
+    bottom: 0;
+    height: 35vh;
+    transform: translate(0, 0);
+  }
+}
+
+.home {
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  header {
+    background-color: rgb(224, 17, 17);
+    display: block;
+    position: absolute;
+    width: 100vw;
+    /* width: 100%; */
+    /* padding: 10px; */
+  }
+
+  header h1 {
+    margin: auto;
+  }
+
+  .home {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .home.small {
+    position: fixed;
+    bottom: 19px;
+    right: 20px;
+    width: 400px;
+    height: 600px;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .home.large {
+
+    /* border: 2px solid; */
+    height: 100%;
+    background-color: black;
+    width: 100%;
+
+    position: relative
+  }
+
+  #main-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    /* width: 60%; */
+    height: 90vh;
+    justify-content: center;
+    left: 0px;
+    right: 0px;
+    bottom: 0;
+    height: 50vh;
+    transform: translate(0, 0);
+  }
+}
+
+/*  */
+
+
+#input-container {
+  border-radius: 5px;
+}
+
+.company-logo {
+  height: 60px;
+}
+
+.root {
+  /* width: 100vw; */
+  background-color: black;
+  height: 99vh;
+}
+
+.myvideoDiv {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  margin: auto;
+}
+
+#myvideo {
+  width: 100%;
+  height: 100%;
+}
+
+.avatar-container {
+  width: 100%;
+  height: 100%;
+  /* display: flex;
+    justify-content: center; */
+  margin: auto;
+}
+
+
+
+#chat-container {
+  display: flex;
+  flex-direction: column-reverse;
+  /* Column-reverse for bottom-to-top */
+  padding: 0px 5px;
+  overflow-y: auto;
+  scrollbar-color: #143056 black;
+  scroll-behavior: smooth;
+  flex-grow: 1;
+  height: calc(100vh - 90px);
+  scrollbar-width: none;
+}
+
+.all_buttons {
+  display: flex;
+  flex-direction: column;
+
+}
+
+#controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: fit-content;
+}
+
+.imageContainer img {
+  max-width: 100%;
+  height: auto;
+  width: 200px;
+}
+
+
+.home.small {
+  width: 60vw;
+  height: 30vh;
+  overflow: hidden;
+}
+
+.buttonOption img {
+  height: 100%;
+  width: 100%;
+}
+
+.root {
+  display: none;
+}
+
+.root.visible {
+  display: flex;
+  border-radius: 6px;
+}
+
+.hidden {
+  display: none !important;
+  /* Ensure the element is completely removed from layout */
+}
+
+.connect-button-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: end;
+  align-items: center;
+}
+
+.connect-button-container.hidden {
+  display: none;
+}
+
+.buttonOption {
+  height: auto;
+  background: transparent;
+  border: none;
+  cursor: default;
+  color: white;
+  cursor: pointer;
+}
+
+/* The Modal */
+.image-modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Black background with opacity */
+  padding: 20px;
+  /* Padding for inner content */
+  box-sizing: border-box;
+  /* Include padding in dimensions */
+}
+
+/* Modal Content */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 85%;
+  max-height: 85%;
+  width: auto;
+  /* Maintain aspect ratio */
+  height: auto;
+  /* Maintain aspect ratio */
+  animation: zoomIn 0.3s ease;
+}
+
+/* Close Button */
+.image-modal .close {
+  position: fixed;
+  /* Ensure it doesn't scroll out */
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 30px;
+  /* Reduced size for better balance */
+  font-weight: bold;
+  cursor: pointer;
+  text-shadow: 2px 2px 5px black;
+  z-index: 1010;
+  /* Above other modal content */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Add background for visibility */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+/* Responsive Rules */
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 80%;
+    /* Adjust size for smaller screens */
+    max-height: 80%;
+  }
+
+  .image-modal .close {
+    font-size: 25px;
+    /* Adjust close button size */
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+  }
+}
+
+/* Zoom In Animation */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* @media (min-width: 769px) {
+  .imageContainer img {
+    max-width: 100%;
+    height: auto;
+    width: 300px;
+  }
+  
+  .company-logo {
+    height: 60px !important;
+  }
+
+  .controls-1 {
+    display: none !important;
+  }
+
+  .controls-2 {
+    display: flex !important;
+  }
+
+ 
+  .root {
+    display: flex;
+    height: calc(100vh - 88px);
+  }
+
+  .avatar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    background-color: black;
+  }
+
+  #main-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    background-color: black;
+    height: auto;
+  }
+
+  .myvideoDiv {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    margin: auto;
+  }
+
+  #controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 60px;
+    right: 20%;
+    z-index: 10;
+  }
+
+  .all_buttons {
+    display: flex;
+
+    gap: 35px;
+  }
+
+  #chat-container {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 20px;
+    overflow-y: auto;
+    scrollbar-color: #143056 black;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    flex-grow: 1;
+    height: calc(100vh - 60px);
+  }
+
+  #myvideo {
+    width: 100%;
+    height: 100%;
+  }
+} */
