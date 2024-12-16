@@ -1,3 +1,62 @@
+(function() {
+  const htmlContent = `
+    <div class="home small" id="homeDiv">
+      <div class="root" id="rootDiv">
+        <div class="avatar-container">
+          <video webkit-playsinline="" playsinline="" crossorigin="anonymous" id="myvideo" autoplay=""></video>
+          <div class="toolbar" id="progress">Progress: 0%</div>
+          <div class="errorMsgShow" id="companyErrorMsg">
+            <h3></h3>
+          </div>
+        </div>
+        <div id="controls">
+          <div class="all_buttons">
+            <!-- <button id="connect" onclick="startCall()">
+              <i class="material-icons">call</i>
+            </button> -->
+            <button id="disconnect" onclick="endCall()" disabled="">
+              <i class="material-icons" style="color: red;">call_end</i>
+            </button>
+            <button id="micButton" onclick="toggleMic()" disabled="">
+              <i class="material-icons" style="color: #ecc47a;">mic_off</i>
+            </button>
+            <button id="speakerButton" onclick="toggleSpeaker()" disabled="">
+              <i class="material-icons" style="color: #ecc47a;">volume_off</i>
+            </button>
+          </div>
+        </div>
+        <div id="main-container" class="content">
+          <div id="chat-container"></div>
+          <div id="input-container" style="gap: 8px">
+            <textarea disabled onkeypress="handleKeyPress()" id="textBox" rows="1"></textarea>
+            <button id="submitButton" onclick="sendText()" disabled>
+              <i class="material-icons">send</i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="connectButtonDiv" class="connect-button-container" style="display: flex;">
+        <button id="connectButton" onclick="startCall()" class="buttonOption">
+          <img src="./avatarIcon.png" alt="">
+        </button>
+      </div>
+      <div id="minimizeMaximizeButton" style="position: absolute;top: 0; right: 0;display: none;">
+        <button id="toggleSizeButton" onclick="toggleSize()" class="buttonOption">
+          <i class="material-icons">remove</i>
+        </button>
+      </div>
+      <div id="imageModal" class="image-modal" onclick="closeImageModal()">
+        <span class="close">&times;</span>
+        <img id="modalImage" class="modal-content" alt="Image Preview">
+      </div>
+    </div>
+  `;
+
+  // Append the HTML to the body
+  document.body.insertAdjacentHTML('beforeend', htmlContent);
+})();
+
+
 var virtuallyhuman = null;
 var needMicAccess = false;
 var host = window.location.hostname;
