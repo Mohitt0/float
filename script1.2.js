@@ -872,7 +872,7 @@ function addMessageFunc(message, sender = "user") {
     messageRow.style.transform = "translateY(20px)"; 
 
     const balloon = document.createElement("div");
-    balloon.classList.add("chat-balloon");
+    balloon.classList.add("chat-balloon",sender);
     const messageSpan = document.createElement("span");
     messageSpan.innerHTML = message;
     balloon.append(messageSpan);
