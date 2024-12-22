@@ -29,19 +29,17 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("Mobile View");
       // Apply mobile-specific changes here
       if(mobileView){
-      let dd =  document.querySelectorAll(".para")
-      dd.forEach(element => {
-        element.style.display = "none"
-       });
+        let afterSection = document.getElementById("after-section");
+        afterSection.style.display = "flex"; // Make the after-section visible
+        
+        // Optionally, you can add a fade-in effect
+        afterSection.style.opacity = "1";
 
       }
      
     } else {
       console.log("Desktop View");
-      let dd =  document.querySelectorAll(".para")
-      dd.forEach(element => {
-        element.style.display = "block"
-       });
+     
        document.getElementById("body").style.overflow = "overlay"
     }
   }
@@ -459,14 +457,6 @@ function endCall(reason) {
   document.getElementById("textBox").disabled = true
   document.getElementById("body").style.overflow = "overlay"
   buttonClickFeedback("disconnect")
-  mobileView = false
-  if(!mobileView){
-    let dd = document.querySelectorAll(".para");
-    dd.forEach(element => {
-      element.style.display = "block";
-    });
-
-  }
   if (virtuallyhuman) {
     virtuallyhuman.disconnectGateway(reason);
     // Unregister for the events.
@@ -529,10 +519,11 @@ const beforeSectionHandleKeyPress = async () => {
         const isMobileView = window.innerWidth <= 768;
 
       if (isMobileView) {
-        let dd = document.querySelectorAll(".para");
-        dd.forEach((element) => {
-          element.style.display = "none";
-        });
+        let afterSection = document.getElementById("after-section");
+        afterSection.style.display = "flex"; // Make the after-section visible
+        
+        // Optionally, you can add a fade-in effect
+        afterSection.style.opacity = "1";
         document.getElementById("body").style.height = "100%";
         document.getElementById("body").style.overflow = "hidden"
       }
@@ -589,10 +580,11 @@ async function beforeSectionSendText() {
   const isMobileView = window.innerWidth <= 768;
 
   if (isMobileView) {
-    let dd = document.querySelectorAll(".para");
-    dd.forEach((element) => {
-      element.style.display = "none";
-    });
+    let afterSection = document.getElementById("after-section");
+    afterSection.style.display = "flex"; // Make the after-section visible
+    
+    // Optionally, you can add a fade-in effect
+    afterSection.style.opacity = "1";
        document.getElementById("body").style.height = "100%";
         document.getElementById("body").style.overflow = "hidden"
   }
@@ -771,7 +763,7 @@ async function showAfter() {
 
   document.getElementById('before-section').style.display = 'none';
  
-  document.getElementById('after-section').style.display = 'block';
+  document.getElementById('after-section').style.display = 'flex';
 }
 
 async function showBefore() {
